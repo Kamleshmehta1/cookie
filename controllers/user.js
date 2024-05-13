@@ -66,13 +66,13 @@ export async function handleLogin(req, res) {
       httpOnly: false,
       maxAge: +process.env.ACCESS_TOKEN_EXPIRE_TIME,
       secure: true,
-      sameSite: 'none',
+      // sameSite: 'none',
     });
     res.cookie('refreshToken', refreshToken, {
       httpOnly: false,
       maxAge: +process.env.REFRESH_TOKEN_EXPIRE_TIME,
       secure: true,
-      sameSite: 'none',
+      // sameSite: 'none',
     });
     return res
       .status(200)
